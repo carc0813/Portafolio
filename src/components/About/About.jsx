@@ -11,9 +11,18 @@ function About(){
 
                 <p>
 
-                    Soy desarrollador Frontend apasionado por crear
-                    aplicaciones web modernas utilizando React,
-                    JavaScript y Node.js.
+                   Soy desarrollador Full Stack Junior con conocimientos
+                    en Java, Spring Boot, React, Node.js,
+                    JavaScript, MySQL y PostgreSQL.
+
+                </p>
+
+                 <p>
+
+                    Actualmente estoy enfocado en el desarrollo Backend,
+                    construyendo proyectos personales utilizando
+                    buenas prácticas como Clean Code,
+                    principios SOLID y arquitectura REST.
 
                 </p>
 

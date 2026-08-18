@@ -1,56 +1,76 @@
+import foto from "../../assets/imag/perfil.png";
 
+function Hero() {
 
-function Hero(){
-
-    return(
-
+    return (
         <section id="home" className="hero">
 
             <div className="container">
 
-                <div className="row align-items-center">
+                <div className="text-center">
 
-                    <div className="col-lg-6">
+                    <h1 className="hero-title">
+                        Hola, soy César
+                        <br />
+                        Full Stack Developer
+                        <br />
+                        de Colombia
+                    </h1>
 
-                        <h1>
+                </div>
 
-                            Hola 👋
 
-                            <br/>
+                <div className="row align-items-center mt-5">
 
-                            Soy César Restrepo
+                    {/* BIOGRAFÍA */}
 
-                        </h1>
+                    <div className="col-lg-4">
 
-                        <h3>
-
-                            Desarrollador Full Stack Junior
-
-                        </h3>
+                        <span className="hero-label">
+                            BIOGRAFÍA
+                        </span>
 
                         <p>
-
-                            React • JavaScript • Node.js
-
+                            ¡Hola! Soy César, desarrollador
+                            Full Stack. Transformo ideas en
+                            experiencias web funcionales,
+                            modernas y escalables.
                         </p>
 
-                        <button className="btn btn-primary">
-
-                            Ver proyectos
-
-                        </button>
-
-                        <button className="btn btn-outline-primary ms-3">
-
-                            Contactarme
-
-                        </button>
+                        <p>
+                            Actualmente estoy enfocado en
+                            el desarrollo Backend y en la
+                            construcción de aplicaciones
+                            web profesionales.
+                        </p>
 
                     </div>
 
-                    <div className="col-lg-6 text-center">
 
-                        FOTO
+                    {/* FOTO */}
+
+                    <div className="col-lg-4 text-center">
+
+                        <img
+                            src={foto}
+                            className="hero-image rounded-circle"
+                            alt="César Restrepo"
+                        />
+
+                    </div>
+
+
+                    {/* EXPERIENCIA */}
+
+                    <div className="col-lg-4 text-center">
+
+                        <span className="hero-label">
+                            AÑOS DE EXPERIENCIA
+                        </span>
+
+                        <h2 className="experience-number">
+                            02+
+                        </h2>
 
                     </div>
 
@@ -59,9 +79,7 @@ function Hero(){
             </div>
 
         </section>
-
-    )
-
+    );
 }
 
 export default Hero;

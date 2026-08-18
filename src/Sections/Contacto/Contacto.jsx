@@ -13,6 +13,32 @@ function Contacto(){
                     Contacto
 
                 </h2>
+                 <form>
+
+                    <input
+                        className="form-control mb-3"
+                        placeholder="Nombre"
+                    />
+
+                    <input
+                        className="form-control mb-3"
+                        placeholder="Correo"
+                    />
+
+                    <textarea
+                        className="form-control mb-3"
+                        rows="5"
+                        placeholder="Mensaje">
+
+                    </textarea>
+
+                    <button className="btn btn-primary">
+
+                        Enviar
+
+                    </button>
+
+                </form>
 
             </div>
 

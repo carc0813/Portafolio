@@ -2,7 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
 import Skills from "../../Sections/Skills/Skills";
-import Projectos from "../../Sections/Projectos/Projectos";
+import Projects from "../../Sections/Projects/Projects";
 import Experiencia from "../../Sections/Experiencia/Experiencia";
 import Contacto from "../../Sections/Contacto/Contacto";
 import Footer from "../Footer/Footer";
@@ -22,7 +22,7 @@ function MainLayout(){
 
              <Skills/>
 
-            <Projectos/>
+            <Projects/>
 
             <Experiencia/>
 

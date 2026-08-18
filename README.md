@@ -154,4 +154,4 @@ El usuario podrá:
 
 ## 🚀 Objetivo Final
 
-Construir un portafolio web profesional que demuestre mis conocimientos en desarrollo  Full Stack, siguiendo buenas prácticas de diseño, accesibilidad, organización del código y experiencia de usuario. 
+Construir un portafolio web profesional que demuestre mis conocimientos en desarrollo  Full Stack, siguiendo buenas prácticas de diseño, accesibilidad, organización del código y experiencia de usuario.  
