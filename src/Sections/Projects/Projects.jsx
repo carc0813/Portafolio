@@ -1,5 +1,6 @@
 import projects from "../../data/projects";
 
+
 function Projects() {
     return (
         <section id="projects" className="py-5">
@@ -27,15 +28,15 @@ function Projects() {
 
                             <div className="card h-100 shadow-sm border-0">
 
-                                <img
-                                    src={project.imagen}
-                                    className="card-img-top"
-                                    alt={`Imagen del proyecto ${project.titulo}`}
-                                    style={{
-                                        height: "220px",
-                                        objectFit: "cover"
-                                    }}
-                                />
+                               <img
+    src={project.imag}
+    className="card-img-top"
+    alt={`Imagen del proyecto ${project.titulo}`}
+    style={{
+        height: "220px",
+        objectFit: "cover"
+    }}
+/>
 
                                 <div className="card-body d-flex flex-column">
 

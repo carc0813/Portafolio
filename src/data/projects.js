@@ -1,3 +1,7 @@
+import proyecto1 from "../assets/imag/proyecto1.png";
+import cancha1 from "../assets/imag/cancha1.jpg";
+import peru from "../assets/imag/peru.jpg";
+
 const projects = [
     {
         id: 1,
@@ -5,7 +9,7 @@ const projects = [
         descripcion:
             "Aplicación Full Stack para gestión de productos, carrito de compras, pedidos y pagos.",
 
-        imagen: "/proyecto1.png",
+        imag: proyecto1,
 
         tecnologias: [
             "React",
@@ -16,9 +20,9 @@ const projects = [
             "Stripe"
         ],
 
-        url: " http://localhost:3000",
+        url: "http://localhost:3000",
 
-        github: "https://github.com/carc0813/Ecommerce.git"
+        github: "https://github.com/carc0813/Ecommerce"
     },
 
     {
@@ -27,39 +31,44 @@ const projects = [
         descripcion:
             "Aplicación web para consultar y reservar canchas sintéticas de manera sencilla.",
 
-        imagen: "/proyecto2.png",
+        imag: cancha1,
 
         tecnologias: [
-            "React",
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
             "JavaScript",
-            "CSS",
-            "Node.js"
+            "PostgreSQL",
+            "Git / GitHub",
+            "Java"
         ],
 
-        url: "https://tu-proyecto-cancheros.com",
+        url: "https://cancheros-proyecto.vercel.app/index.html",
 
-        github: "https://github.com/tu-usuario/cancheros"
+        github: "https://github.com/Dylanfelipe01/Cancheros_Proyecto.git"
     },
 
-    {
-        id: 3,
-        titulo: "NASA APOD",
-        descripcion:
-            "Aplicación que consume la API de NASA para mostrar la imagen astronómica del día.",
+{
+    id: 3,
+    titulo: "Hackatón 1 - Generation",
+    descripcion:
+        "Proyecto colaborativo desarrollado durante la Hackatón de Generation, enfocado en la creación de una aplicación web funcional. de turismo",
 
-        imagen: "/proyecto3.png",
+    imag:peru,
 
-        tecnologias: [
-            "React",
-            "Axios",
-            "API REST",
-            "CSS"
-        ],
+    tecnologias: [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript"
+    ],
 
-        url: "https://tu-nasa-apod.com",
+    url: "https://juanva092002.github.io/Hackaton_1_Generation/",
 
-        github: "https://github.com/tu-usuario/nasa-apod"
-    }
+    github: "https://github.com/JuanVa092002/Hackaton_1_Generation"
+}
+
+
 ];
 
 export default projects;

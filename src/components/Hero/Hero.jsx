@@ -1,4 +1,5 @@
 import foto from "../../assets/imag/perfil.png";
+import cv from "../../assets/CV/CV-Cesar-Andres-Restrepo-Generation-Formato-septiembre2026.pdf";
 
 function Hero() {
 
@@ -43,6 +44,30 @@ function Hero() {
                             construcción de aplicaciones
                             web profesionales.
                         </p>
+                                <div className="mt-4">
+
+                            <a
+                                href="#projects"
+                                className="btn btn-dark me-2"
+                            >
+                                Ver proyectos
+                            </a>
+
+                            <a
+                                href="#contact"
+                                className="btn btn-outline-dark"
+                            >
+                                Contactarme
+                            </a>
+                             <a
+        href={cv}
+        download="CV_Cesar_Restrepo.pdf"
+        className="btn btn-outline-secondary"
+    >
+        Descargar CV
+    </a>
+
+                        </div>
 
                     </div>
 

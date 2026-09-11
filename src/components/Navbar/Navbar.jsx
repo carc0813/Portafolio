@@ -80,6 +80,30 @@ function Navbar() {
                                 Contactos
                             </a>
                         </li>
+                                   {/* GITHUB */}
+                        <li className="nav-item">
+                            <a
+                                href="https://github.com/carc0813"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="nav-link"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+
+                        {/* LINKEDIN */}
+                        <li className="nav-item">
+                            <a
+                                href="https://www.linkedin.com/in/cesar-andres-restrepo-castrillon/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="nav-link"
+                            >
+                                LinkedIn
+                            </a>
+                        </li>
+
 
                         <li className="nav-item">
                             <button className="btn btn-link nav-link">

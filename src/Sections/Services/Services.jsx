@@ -68,8 +68,9 @@ function Services() {
                                 </h4>
 
                                 <p>
-                                    Diseño y gestión de bases de
-                                    datos MySQL y PostgreSQL.
+                                    Diseño y gestión de bases de datos
+                                    relacionales utilizando MySQL y
+                                    PostgreSQL.
                                 </p>
 
                             </div>
