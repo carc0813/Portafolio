@@ -1,15 +1,15 @@
-import proyecto1 from "../assets/imag/proyecto1.png";
+import urLearning from "../assets/imag/urLearning.png";
 import cancha1 from "../assets/imag/cancha1.jpg";
 import peru from "../assets/imag/peru.jpg";
 
 const projects = [
     {
         id: 1,
-        titulo: "E-commerce",
+        titulo: "urLearning",
         descripcion:
-            "Aplicación Full Stack para gestión de productos, carrito de compras, pedidos y pagos.",
+            "Aplicación Full Stack para gestión de cursos, carrito de compras, pedidos y pagos.",
 
-        imag: proyecto1,
+        imag: urLearning,
 
         tecnologias: [
             "React",
@@ -20,9 +20,9 @@ const projects = [
             "Stripe"
         ],
 
-        url: "http://localhost:3000",
+        url: "https://pf-ur-learning.vercel.app/",
 
-        github: "https://github.com/carc0813/Ecommerce"
+        github: "https://github.com/JuanSBass/PF-urLearning"
     },
 
     {
