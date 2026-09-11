@@ -1,4 +1,4 @@
-import urLearning from "../assets/imag/urLearning.png";
+import urLearning from "../assets/imag/urlearning.png";
 import cancha1 from "../assets/imag/cancha1.jpg";
 import peru from "../assets/imag/peru.jpg";
 
@@ -9,7 +9,7 @@ const projects = [
         descripcion:
             "Aplicación Full Stack para gestión de cursos, carrito de compras, pedidos y pagos.",
 
-        imag: urLearning,
+        imag:  urLearning,
 
         tecnologias: [
             "React",
