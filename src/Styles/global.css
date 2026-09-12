@@ -1,3 +1,7 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,23 +18,55 @@ body {
     color: #222;
 }
 
+/* =========================================
+   SECTIONS
+========================================= */
+
 section {
     padding: 100px 0;
+    scroll-margin-top: 90px;
 }
 
-/* NAVBAR */
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
-    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
     padding: 25px 0;
+    background: #ffffff;
+}
+
+.navbar-brand {
+    white-space: nowrap;
+}
+
+.navbar-nav {
+    align-items: center;
 }
 
 .nav-link {
     margin-left: 20px;
+    transition: color 0.3s ease;
 }
 
+.nav-link:hover {
+    color: #2563eb;
+}
 
-/* HERO */
+/* Botón modo oscuro */
+.theme-button {
+    text-decoration: none !important;
+    border: none;
+}
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
     min-height: 100vh;
@@ -67,8 +103,9 @@ section {
     margin-top: 10px;
 }
 
-
-/* CARDS */
+/* =========================================
+   CARDS
+========================================= */
 
 .card {
     border: none;
@@ -79,10 +116,101 @@ section {
     transform: translateY(-8px);
 }
 
+/* =========================================
+   MOBILE
+========================================= */
 
-/* MOBILE */
+@media (max-width: 991.98px) {
 
-@media (max-width: 768px) {
+    /* NAVBAR */
+
+    .navbar {
+        padding: 10px 0;
+        background: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar > .container {
+        position: relative;
+    }
+
+    /* Botón hamburguesa */
+
+    .navbar-toggler {
+        border: 2px solid #666;
+        border-radius: 10px;
+        padding: 6px 10px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /* MENÚ DESPLEGABLE */
+
+     .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 12px;
+    right: 12px;
+
+    background: #ffffff;
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    z-index: 2000;
+}
+    /* Lista */
+
+    .navbar-nav {
+    width: 100%;
+    align-items: stretch;
+    gap: 0;
+}
+    /* Items */
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    /* Enlaces */
+
+     .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 7px 12px !important;
+
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+    .navbar-nav .nav-link:hover {
+        background: #f1f5f9;
+        color: #2563eb;
+    }
+
+    /* Botón de tema */
+
+    .theme-button {
+        width: 100%;
+        text-align: left;
+        margin-left: 0 !important;
+    }
+
+    /* HERO */
+
+    .hero {
+        padding-top: 120px;
+    }
 
     .hero-title {
         font-size: 2.5rem;
@@ -98,12 +226,16 @@ section {
         font-size: 3rem;
     }
 
+    /* Evita que los anchors queden debajo del Navbar */
+
+    section {
+        scroll-margin-top: 80px;
+    }
 }
 
-
-/* =========================
+/* =========================================
    DARK MODE
-========================= */
+========================================= */
 
 body.dark-mode {
     background: #121212;
@@ -120,7 +252,7 @@ body.dark-mode .nav-link {
 }
 
 body.dark-mode .nav-link:hover {
-    color: #aaa !important;
+    color: #06b6d4 !important;
 }
 
 body.dark-mode .hero {
@@ -177,4 +309,37 @@ body.dark-mode .btn-outline-dark:hover {
 body.dark-mode footer {
     background: #181818;
     color: #ffffff;
+}
+
+/* =========================================
+   DARK MODE - MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    body.dark-mode .navbar {
+        background: #181818 !important;
+    }
+
+    body.dark-mode .navbar-collapse {
+        background: #181818;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    body.dark-mode .navbar-nav .nav-link {
+        color: #f5f5f5 !important;
+    }
+
+    body.dark-mode .navbar-nav .nav-link:hover {
+        background: #252525;
+        color: #06b6d4 !important;
+    }
+
+    body.dark-mode .navbar-toggler {
+        border-color: #666;
+    }
+
+    body.dark-mode .navbar-toggler-icon {
+        filter: invert(1);
+    }
 }
