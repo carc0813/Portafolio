@@ -1,11 +1,47 @@
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+
 function Contacto() {
 
-    const handleSubmit = (e) => {
+    const [enviando, setEnviando] = useState(false);
+    const [mensaje, setMensaje] = useState("");
+
+    const handleSubmit = async (e) => {
+
         e.preventDefault();
 
-        alert("¡Gracias por contactarme! Recibí tu mensaje.");
+        setEnviando(true);
+        setMensaje("");
 
-        e.target.reset();
+        try {
+
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                e.target,
+                {
+                    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                }
+            );
+
+            setMensaje(
+                "¡Mensaje enviado correctamente! Gracias por contactarme."
+            );
+
+            e.target.reset();
+
+        } catch (error) {
+
+            console.error("Error al enviar el mensaje:", error);
+
+            setMensaje(
+                "No se pudo enviar el mensaje. Inténtalo nuevamente."
+            );
+
+        } finally {
+
+            setEnviando(false);
+        }
     };
 
     return (
@@ -13,14 +49,13 @@ function Contacto() {
 
             <div className="container">
 
-                <h2>
-                    Contacto
-                </h2>
+                <h2>Contacto</h2>
 
                 <form onSubmit={handleSubmit}>
 
                     <input
                         type="text"
+                        name="name"
                         className="form-control mb-3"
                         placeholder="Nombre"
                         required
@@ -28,12 +63,14 @@ function Contacto() {
 
                     <input
                         type="email"
+                        name="email"
                         className="form-control mb-3"
-                        placeholder="Correo"
+                        placeholder="Correo electrónico"
                         required
                     />
 
                     <textarea
+                        name="message"
                         className="form-control mb-3"
                         rows="5"
                         placeholder="Mensaje"
@@ -43,13 +80,18 @@ function Contacto() {
                     <button
                         type="submit"
                         className="btn btn-primary"
+                        disabled={enviando}
                     >
-                        Enviar
+                        {enviando ? "Enviando..." : "Enviar"}
                     </button>
 
                 </form>
 
-                {/* DATOS DE CONTACTO */}
+                {mensaje && (
+                    <div className="alert alert-info mt-3">
+                        {mensaje}
+                    </div>
+                )}
 
                 <div className="mt-4">
 
