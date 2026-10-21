@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import cv from "../../assets/CV/CV-Cesar-Andres-Restrepo-Generation-Formato-septiembre2026.pdf";
 import { useState } from "react";
 
 function Contacto() {
@@ -45,88 +46,120 @@ function Contacto() {
     };
 
     return (
-        <section id="contact">
+        
+<section id="contact" className="contact-section">
+    <div className="container">
 
-            <div className="container">
+        <div className="section-heading text-center">
+            <span className="section-label">
+                HABLEMOS
+            </span>
 
-                <h2>Contacto</h2>
+            <h2>¿Trabajamos juntos?</h2>
 
-                <form onSubmit={handleSubmit}>
+            <p>
+                Estoy interesado en nuevas oportunidades profesionales
+                y proyectos donde pueda aportar mis conocimientos
+                y continuar creciendo como desarrollador.
+            </p>
+        </div>
+
+        <div className="contact-card">
+
+            <form onSubmit={handleSubmit}>
+
+                <div className="mb-3">
+                    <label htmlFor="contact-name" className="form-label">
+                        Nombre
+                    </label>
 
                     <input
+                        id="contact-name"
                         type="text"
                         name="name"
-                        className="form-control mb-3"
-                        placeholder="Nombre"
+                        className="form-control"
+                        placeholder="Escribe tu nombre"
                         required
                     />
-
-                    <input
-                        type="email"
-                        name="email"
-                        className="form-control mb-3"
-                        placeholder="Correo electrónico"
-                        required
-                    />
-
-                    <textarea
-                        name="message"
-                        className="form-control mb-3"
-                        rows="5"
-                        placeholder="Mensaje"
-                        required
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        className="btn btn-primary"
-                        disabled={enviando}
-                    >
-                        {enviando ? "Enviando..." : "Enviar"}
-                    </button>
-
-                </form>
-
-                {mensaje && (
-                    <div className="alert alert-info mt-3">
-                        {mensaje}
-                    </div>
-                )}
-
-                <div className="mt-4">
-
-                    <p>
-                        <strong>Correo:</strong>{" "}
-                        carestrepo13@gmail.com
-                    </p>
-
-                    <div className="d-flex gap-3">
-
-                        <a
-                            href="https://github.com/carc0813"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-outline-dark"
-                        >
-                            GitHub
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/cesar-andres-restrepo-castrillon/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-outline-primary"
-                        >
-                            LinkedIn
-                        </a>
-
-                    </div>
-
                 </div>
 
+                <div className="mb-3">
+                    <label htmlFor="contact-email" className="form-label">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        id="contact-email"
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="nombre@correo.com"
+                        required
+                    />
+                </div>
+
+                <div className="mb-4">
+                    <label htmlFor="contact-message" className="form-label">
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        className="form-control"
+                        rows="5"
+                        placeholder="Cuéntame en qué podemos trabajar..."
+                        required
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    className="btn btn-primary-custom w-100"
+                    disabled={enviando}
+                >
+                    {enviando ? "Enviando..." : "Enviar mensaje"}
+                </button>
+
+            </form>
+
+            {mensaje && (
+                <div className="alert alert-info mt-3" role="status">
+                    {mensaje}
+                </div>
+            )}
+
+            <div className="contact-email">
+                <span>También puedes escribirme a</span>
+
+                <a href="mailto:carestrepo13@gmail.com">
+                    carestrepo13@gmail.com
+                </a>
             </div>
 
-        </section>
+        </div>
+
+        <div className="cv-callout">
+            <h3>¿Quieres conocer más sobre mi perfil?</h3>
+
+            <p>
+                Consulta mi hoja de vida y conoce mi formación
+                y experiencia profesional.
+            </p>
+
+            <a
+                href={cv}
+                download="CV_Cesar_Restrepo.pdf"
+                className="btn btn-secondary-custom"
+            >
+                Descargar CV ↓
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
     );
 }
 

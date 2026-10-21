@@ -1,108 +1,79 @@
+
 import foto from "../../assets/imag/perfil.png";
-import cv from "../../assets/CV/CV-Cesar-Andres-Restrepo-Generation-Formato-septiembre2026.pdf";
 
 function Hero() {
-
     return (
         <section id="home" className="hero">
-
             <div className="container">
+                <div className="row align-items-center g-5">
 
-                <div className="text-center">
-
-                    <h1 className="hero-title">
-                        Hola, soy César
-                        <br />
-                        Full Stack Developer
-                        <br />
-                        de Colombia
-                    </h1>
-
-                </div>
-
-
-                <div className="row align-items-center mt-5">
-
-                    {/* BIOGRAFÍA */}
-
-                    <div className="col-lg-4">
-
+                    {/* PRESENTACIÓN */}
+                    <div className="col-lg-7 order-2 order-lg-1">
                         <span className="hero-label">
-                            BIOGRAFÍA
+                            DESARROLLADOR DE SOFTWARE · COLOMBIA
                         </span>
 
-                        <p>
-                            ¡Hola! Soy César, desarrollador
-                            Full Stack. Transformo ideas en
-                            experiencias web funcionales,
-                            modernas y escalables.
+                        <h1 className="hero-title mt-4">
+                            Desarrollo soluciones
+                            <br />
+
+                            <span className="text-accent">
+                                digitales modernas.
+                            </span>
+                        </h1>
+
+                        <p className="hero-description">
+                            Soy César Restrepo, desarrollador Full Stack
+                            Junior con enfoque en Backend. Trabajo con Java,
+                            Spring Boot y tecnologías web para construir
+                            aplicaciones funcionales, seguras y mantenibles.
                         </p>
 
-                        <p>
-                            Actualmente estoy enfocado en
-                            el desarrollo Backend y en la
-                            construcción de aplicaciones
-                            web profesionales.
-                        </p>
-                                <div className="mt-4">
+                        <div className="hero-technologies">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                        </div>
 
+                        <div className="hero-actions mt-4">
                             <a
                                 href="#projects"
-                                className="btn btn-dark me-2"
+                                className="btn btn-primary-custom"
                             >
                                 Ver proyectos
+                                <span aria-hidden="true"> ↗</span>
                             </a>
 
                             <a
                                 href="#contact"
-                                className="btn btn-outline-dark"
+                                className="btn btn-secondary-custom"
                             >
                                 Contactarme
                             </a>
-                             <a
-        href={cv}
-        download="CV_Cesar_Restrepo.pdf"
-        className="btn btn-outline-secondary"
-    >
-        Descargar CV
-    </a>
-
                         </div>
-
                     </div>
 
+                    {/* FOTOGRAFÍA */}
+                    <div className="col-lg-5 order-1 order-lg-2 text-center">
+                        <div className="hero-image-container">
+                            <div className="hero-image-glow"></div>
 
-                    {/* FOTO */}
+                            <img
+                                src={foto}
+                                className="hero-image"
+                                alt="César Restrepo, desarrollador de software"
+                            />
 
-                    <div className="col-lg-4 text-center">
-
-                        <img
-                            src={foto}
-                            className="hero-image rounded-circle"
-                            alt="César Restrepo"
-                        />
-
-                    </div>
-
-
-                    {/* EXPERIENCIA */}
-
-                    <div className="col-lg-4 text-center">
-
-                        <span className="hero-label">
-                            AÑOS DE EXPERIENCIA
-                        </span>
-
-                        <h2 className="experience-number">
-                            02+
-                        </h2>
-
+                            <div className="hero-floating-card">
+                                <span className="status-dot"></span>
+                                <span>En constante aprendizaje</span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
-
         </section>
     );
 }

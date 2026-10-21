@@ -29,13 +29,19 @@ function Navbar() {
             <div className="container">
 
                 {/* LOGO */}
-                <a
-                    href="#home"
-                    className="navbar-brand fw-bold"
-                    onClick={closeMenu}
-                >
-                    César R.
-                </a>
+
+               <a
+    href="#home"
+    className="navbar-brand brand-logo"
+    onClick={closeMenu}
+>
+    <span className="brand-mark">CR</span>
+
+    <span className="brand-name">
+        César Restrepo
+        <small>Software Developer</small>
+    </span>
+</a>
 
                 {/* BOTÓN HAMBURGUESA */}
                 <button
